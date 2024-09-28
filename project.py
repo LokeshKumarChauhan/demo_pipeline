@@ -4,13 +4,9 @@ import pandas as pd
 
 print("modules imported ")
 # making a connection 
-
-conn = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='root',
-    database='car_sales'
-)
+import credentials
+d= credentials.data
+conn = mysql.connector.connect(**d)
 cursor = conn.cursor()
 
 print("connection got created ")
